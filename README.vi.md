@@ -57,6 +57,12 @@ Nguồn kiến thức chính:
 https://github.com/garrytan/gstack
 ```
 
+Tài liệu tổng quan tiếng Việt:
+
+```text
+docs/gstack-overview.vi.md
+```
+
 ## Ghi Chú Ngôn Ngữ
 
 - Tài liệu dành cho người đọc nên ưu tiên tiếng Việt.

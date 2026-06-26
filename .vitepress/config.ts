@@ -16,6 +16,7 @@ export default defineConfig({
         text: 'Start',
         items: [
           { text: 'Overview', link: '/' },
+          { text: 'GStack Overview', link: '/gstack-overview.vi' },
           { text: 'Project Plan', link: '/project-plan' }
         ]
       },

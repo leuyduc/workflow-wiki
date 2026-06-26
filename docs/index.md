@@ -26,6 +26,7 @@ https://github.com/garrytan/gstack
 
 ## Main Sections
 
+- [Tổng quan GStack](./gstack-overview.vi.md)
 - [Sprint Lifecycle](./stages/lifecycle.md)
 - [Workflow Index](./workflows/index.md)
 - [Specialists](./specialists/index.md)
