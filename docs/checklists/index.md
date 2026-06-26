@@ -1,0 +1,36 @@
+# Checklists
+
+## MVP Checklist
+
+- [ ] Workspace created
+- [ ] GitHub repo created
+- [ ] Project plan committed
+- [ ] Architecture documented
+- [ ] VitePress configured
+- [ ] Starter docs created
+- [ ] GStack sync scaffold created
+- [ ] Local build passes
+- [ ] Browser QA passes
+
+## Workflow Page Checklist
+
+- [ ] Title is clear
+- [ ] Source skill is linked
+- [ ] Stage is defined
+- [ ] Specialist is defined
+- [ ] Inputs are listed
+- [ ] Process is step-by-step
+- [ ] Outputs are explicit
+- [ ] Done checklist exists
+- [ ] Related workflows are linked
+
+## Browser QA Checklist
+
+- [ ] Desktop tested
+- [ ] Mobile 390 tested
+- [ ] Mobile 360 tested
+- [ ] Mobile 320 tested
+- [ ] Console errors are 0
+- [ ] Horizontal overflow is false
+- [ ] Screenshots captured
+- [ ] Visual issues inspected by eye
