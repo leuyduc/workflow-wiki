@@ -1,5 +1,7 @@
 # Workflow Wiki
 
+Vietnamese version: [README.vi.md](./README.vi.md)
+
 A workflow wiki and operating manual for AI-assisted projects, teams, roles, and industry playbooks. The first knowledge source is Garry Tan's `gstack` repository.
 
 ## Purpose
