@@ -18,6 +18,22 @@ gstack knowledge source
 
 The site is meant to help Lucky and collaborators understand how to run project workflows across different jobs, roles, and industries.
 
+## Recommended Reading Order
+
+Start here if you are new to the project:
+
+1. `README.vi.md` - Vietnamese project overview.
+2. `docs/gstack-overview.vi.md` - Vietnamese overview of what `gstack` is and why it is the first source.
+3. `PLAN.md` - roadmap, MVP scope, and next phases.
+4. `ARCHITECTURE.md` - ingestion, normalization, and publishing architecture.
+5. `docs/stages/lifecycle.md` - workflow lifecycle: Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect.
+6. `docs/workflows/index.md` - initial high-priority workflow list.
+7. `docs/prompts/index.md` - starter prompts for ingestion, QA, and workflow page conversion.
+8. `docs/checklists/index.md` - MVP, workflow page, and browser QA checklists.
+9. `scripts/sync-gstack.ts` - for AI/dev readers who need to understand the planned gstack sync pipeline.
+
+Human readers should start with `README.vi.md` and `docs/gstack-overview.vi.md`. AI/dev readers should also read `PLAN.md`, `ARCHITECTURE.md`, and `scripts/sync-gstack.ts`.
+
 ## Initial Direction
 
 - Build a static docs/wiki MVP first.
