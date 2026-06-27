@@ -18,6 +18,7 @@ export default defineConfig({
           { text: 'Overview', link: '/' },
           { text: 'GStack Overview', link: '/gstack-overview.vi' },
           { text: 'Hermes Evolution', link: '/hermes-evolution/from-fable-5-prompt.vi' },
+          { text: 'AI Agent Project Structure', link: '/project-structure/ai-agent-project-structure.vi' },
           { text: 'Project Plan', link: '/project-plan' }
         ]
       },

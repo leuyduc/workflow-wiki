@@ -25,13 +25,14 @@ Start here if you are new to the project:
 1. `README.vi.md` - Vietnamese project overview.
 2. `docs/gstack-overview.vi.md` - Vietnamese overview of what `gstack` is and why it is the first source.
 3. `docs/hermes-evolution/from-fable-5-prompt.vi.md` - lessons for evolving Hermes from the Fable 5 prompt case study.
-4. `PLAN.md` - roadmap, MVP scope, and next phases.
-5. `ARCHITECTURE.md` - ingestion, normalization, and publishing architecture.
-6. `docs/stages/lifecycle.md` - workflow lifecycle: Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect.
-7. `docs/workflows/index.md` - initial high-priority workflow list.
-8. `docs/prompts/index.md` - starter prompts for ingestion, QA, and workflow page conversion.
-9. `docs/checklists/index.md` - MVP, workflow page, and browser QA checklists.
-10. `scripts/sync-gstack.ts` - for AI/dev readers who need to understand the planned gstack sync pipeline.
+4. `docs/project-structure/ai-agent-project-structure.vi.md` - AI-agent-friendly repo structure template for Lucky/Hermes/Codex.
+5. `PLAN.md` - roadmap, MVP scope, and next phases.
+6. `ARCHITECTURE.md` - ingestion, normalization, and publishing architecture.
+7. `docs/stages/lifecycle.md` - workflow lifecycle: Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect.
+8. `docs/workflows/index.md` - initial high-priority workflow list.
+9. `docs/prompts/index.md` - starter prompts for ingestion, QA, and workflow page conversion.
+10. `docs/checklists/index.md` - MVP, workflow page, and browser QA checklists.
+11. `scripts/sync-gstack.ts` - for AI/dev readers who need to understand the planned gstack sync pipeline.
 
 Human readers should start with `README.vi.md` and `docs/gstack-overview.vi.md`. AI/dev readers should also read `PLAN.md`, `ARCHITECTURE.md`, and `scripts/sync-gstack.ts`.
 

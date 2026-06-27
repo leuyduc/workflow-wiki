@@ -23,13 +23,14 @@ Nếu mới vào dự án, nên đọc theo thứ tự này:
 1. `README.vi.md` - hiểu nhanh mục tiêu của dự án.
 2. `docs/gstack-overview.vi.md` - hiểu tổng quan `gstack` là gì và vì sao dùng làm nguồn dữ liệu.
 3. `docs/hermes-evolution/from-fable-5-prompt.vi.md` - xem bài học có thể áp dụng để tiến hóa Hermes.
-4. `PLAN.md` - hiểu roadmap tổng thể, MVP scope và các phase tiếp theo.
-5. `ARCHITECTURE.md` - hiểu kiến trúc ingest/sync/publish của wiki.
-6. `docs/stages/lifecycle.md` - hiểu vòng đời workflow: Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect.
-7. `docs/workflows/index.md` - xem danh sách workflow ưu tiên.
-8. `docs/prompts/index.md` - xem prompt mẫu để ingest, QA và chuyển skill thành workflow page.
-9. `docs/checklists/index.md` - xem checklist MVP, workflow page và browser QA.
-10. `scripts/sync-gstack.ts` - phần này dành cho AI/dev đọc để hiểu hướng sync dữ liệu từ `gstack`.
+4. `docs/project-structure/ai-agent-project-structure.vi.md` - xem template cấu trúc repo cho AI agent.
+5. `PLAN.md` - hiểu roadmap tổng thể, MVP scope và các phase tiếp theo.
+6. `ARCHITECTURE.md` - hiểu kiến trúc ingest/sync/publish của wiki.
+7. `docs/stages/lifecycle.md` - hiểu vòng đời workflow: Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect.
+8. `docs/workflows/index.md` - xem danh sách workflow ưu tiên.
+9. `docs/prompts/index.md` - xem prompt mẫu để ingest, QA và chuyển skill thành workflow page.
+10. `docs/checklists/index.md` - xem checklist MVP, workflow page và browser QA.
+11. `scripts/sync-gstack.ts` - phần này dành cho AI/dev đọc để hiểu hướng sync dữ liệu từ `gstack`.
 
 Tóm lại: người đọc nên bắt đầu từ `README.vi.md` và `docs/gstack-overview.vi.md`; AI/dev muốn build tiếp thì đọc thêm `PLAN.md`, `ARCHITECTURE.md` và `scripts/sync-gstack.ts`.
 
