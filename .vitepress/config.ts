@@ -16,6 +16,8 @@ export default defineConfig({
         text: 'Start',
         items: [
           { text: 'Overview', link: '/' },
+          { text: 'Core Thesis', link: '/core-thesis.vi' },
+          { text: 'Source Evaluation', link: '/source-evaluation.vi' },
           { text: 'GStack Overview', link: '/gstack-overview.vi' },
           { text: 'Hermes Evolution', link: '/hermes-evolution/from-fable-5-prompt.vi' },
           { text: 'Oh My OpenAgent Lessons', link: '/agent-os/oh-my-openagent-lessons.vi' },

@@ -30,15 +30,17 @@ The goal is to make AI agents work in Lucky's style even across different tools 
 When joining this repo, read in this order:
 
 1. `AGENTS.md` - this file.
-2. `README.vi.md` - Vietnamese overview.
-3. `docs/gstack-overview.vi.md` - why `gstack` matters.
-4. `docs/hermes-evolution/from-fable-5-prompt.vi.md` - Hermes evolution lessons.
-5. `docs/agent-os/oh-my-openagent-lessons.vi.md` - agent OS and evidence-gate lessons.
-6. `docs/project-structure/ai-agent-project-structure.vi.md` - repo structure for AI-agent-friendly projects.
-7. `PLAN.md` - roadmap and MVP scope.
-8. `ARCHITECTURE.md` - ingestion/publishing architecture.
-9. `docs/stages/lifecycle.md` - workflow lifecycle.
-10. `docs/workflows/index.md`, `docs/checklists/index.md`, `docs/prompts/index.md` as needed.
+2. `docs/core-thesis.vi.md` - Lucky Agent OS core thesis and 7-layer model.
+3. `docs/source-evaluation.vi.md` - source classification and scorecard.
+4. `README.vi.md` - Vietnamese overview.
+5. `docs/gstack-overview.vi.md` - why `gstack` matters.
+6. `docs/hermes-evolution/from-fable-5-prompt.vi.md` - Hermes evolution lessons.
+7. `docs/agent-os/oh-my-openagent-lessons.vi.md` - agent OS and evidence-gate lessons.
+8. `docs/project-structure/ai-agent-project-structure.vi.md` - repo structure for AI-agent-friendly projects.
+9. `PLAN.md` - roadmap and MVP scope.
+10. `ARCHITECTURE.md` - ingestion/publishing architecture.
+11. `docs/stages/lifecycle.md` - workflow lifecycle.
+12. `docs/workflows/index.md`, `docs/checklists/index.md`, `docs/prompts/index.md` as needed.
 
 Do not assume you understand the repo after only reading `README.md`.
 
