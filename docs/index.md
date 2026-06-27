@@ -27,6 +27,7 @@ https://github.com/garrytan/gstack
 ## Main Sections
 
 - [Tổng quan GStack](./gstack-overview.vi.md)
+- [Bài học cho Hermes từ prompt Fable 5](./hermes-evolution/from-fable-5-prompt.vi.md)
 - [Sprint Lifecycle](./stages/lifecycle.md)
 - [Workflow Index](./workflows/index.md)
 - [Specialists](./specialists/index.md)
