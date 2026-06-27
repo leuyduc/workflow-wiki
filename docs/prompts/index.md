@@ -2,6 +2,10 @@
 
 Starter prompts for working with this project and for converting gstack workflows into wiki pages.
 
+## Agent Entrypoint
+
+- [Dùng Lucky Workflow Với Agent Khác](./use-lucky-workflow.vi.md)
+
 ## Browser-In-The-Loop QA Prompt
 
 ```text

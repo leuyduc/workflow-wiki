@@ -5,19 +5,30 @@ import { execFileSync } from 'node:child_process';
 
 const repoUrl = 'https://github.com/garrytan/gstack.git';
 const sourceDir = path.resolve('.cache/gstack');
-const outputDir = path.resolve('docs/workflows/generated');
+const catalogPath = path.resolve('docs/workflows/gstack-catalog.json');
+const generatedIndexPath = path.resolve('docs/workflows/generated/index.md');
+
+type SkillRecord = {
+  slug: string;
+  name: string;
+  title: string;
+  description: string;
+  stage: string;
+  specialist: string;
+  sourcePath: string;
+  sourceUrl: string;
+  triggers: string[];
+  headings: string[];
+};
 
 function slugify(input: string) {
-  return input
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
+  return input.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
 function parseFrontmatter(markdown: string) {
-  if (!markdown.startsWith('---')) return { data: {}, body: markdown };
+  if (!markdown.startsWith('---')) return { data: {} as Record<string, string>, body: markdown };
   const end = markdown.indexOf('\n---', 3);
-  if (end === -1) return { data: {}, body: markdown };
+  if (end === -1) return { data: {} as Record<string, string>, body: markdown };
 
   const raw = markdown.slice(3, end).trim();
   const body = markdown.slice(end + 4).trim();
@@ -28,85 +39,137 @@ function parseFrontmatter(markdown: string) {
     if (index === -1) continue;
     const key = line.slice(0, index).trim();
     const value = line.slice(index + 1).trim().replace(/^['"]|['"]$/g, '');
-    data[key] = value;
+    if (key) data[key] = value;
   }
 
   return { data, body };
 }
 
-async function discoverSkillFiles(root: string) {
-  const entries = await readdir(root, { withFileTypes: true });
+async function walkSkillFiles(root: string) {
   const files: string[] = [];
 
-  for (const entry of entries) {
-    if (!entry.isDirectory()) continue;
-    if (entry.name.startsWith('.')) continue;
-    const skillPath = path.join(root, entry.name, 'SKILL.md');
-    if (existsSync(skillPath)) files.push(skillPath);
+  async function walk(dir: string) {
+    const entries = await readdir(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (entry.name.startsWith('.')) continue;
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        await walk(fullPath);
+      } else if (entry.isFile() && entry.name === 'SKILL.md') {
+        files.push(fullPath);
+      }
+    }
   }
 
+  await walk(root);
   return files.sort();
 }
 
 function classifyStage(slug: string) {
-  if (slug.includes('office') || slug.includes('ceo')) return 'Think';
+  if (slug.includes('office')) return 'Think';
   if (slug.includes('plan') || slug.includes('spec') || slug.includes('autoplan')) return 'Plan';
-  if (slug.includes('design')) return 'Design';
+  if (slug.includes('design-html') || slug.includes('codex') || slug.includes('guard') || slug.includes('freeze')) return 'Build';
   if (slug.includes('review') || slug.includes('investigate') || slug.includes('cso')) return 'Review';
   if (slug.includes('qa') || slug.includes('browse') || slug.includes('benchmark')) return 'Test';
   if (slug.includes('ship') || slug.includes('deploy') || slug.includes('canary')) return 'Ship';
-  if (slug.includes('document') || slug.includes('learn') || slug.includes('retro')) return 'Reflect';
+  if (slug.includes('document') || slug.includes('learn') || slug.includes('retro') || slug.includes('context')) return 'Reflect';
   return 'Workflow';
 }
 
-function workflowMarkdown(args: {
-  title: string;
-  slug: string;
-  sourcePath: string;
-  description: string;
-  stage: string;
-  body: string;
-}) {
-  const excerpt = args.body.split('\n').slice(0, 80).join('\n');
-
-  return `---\ntitle: ${args.title}\nslug: ${args.slug}\nsource: gstack\nsourcePath: ${args.sourcePath}\nstage: ${args.stage}\ntype: workflow\n---\n\n# ${args.title}\n\n## Source\n\nImported from gstack source file:\n\n\`\`\`text\n${args.sourcePath}\n\`\`\`\n\n## Description\n\n${args.description || 'No description found in frontmatter.'}\n\n## Stage\n\n${args.stage}\n\n## Raw Skill Excerpt\n\nThe generated importer keeps an excerpt first. Later phases should convert this into a curated workflow page with inputs, process, outputs, checklist, and related workflows.\n\n${excerpt}\n`;
+function inferSpecialist(slug: string, description: string) {
+  const text = `${slug} ${description}`.toLowerCase();
+  if (text.includes('ceo') || text.includes('founder') || text.includes('office')) return 'Founder / Product Strategist';
+  if (text.includes('eng')) return 'Engineering Manager';
+  if (text.includes('design')) return 'Designer Who Codes';
+  if (text.includes('qa') || text.includes('browse')) return 'QA Lead';
+  if (text.includes('ship') || text.includes('deploy') || text.includes('canary')) return 'Release Engineer';
+  if (text.includes('document') || text.includes('learn') || text.includes('retro')) return 'Technical Writer / Learning Loop';
+  if (text.includes('cso') || text.includes('security')) return 'Security Officer';
+  if (text.includes('review') || text.includes('investigate')) return 'Staff Engineer';
+  return 'Workflow Operator';
 }
 
-async function main() {
-  await mkdir('.cache', { recursive: true });
-  await mkdir(outputDir, { recursive: true });
+function extractTriggers(markdown: string) {
+  const triggers = new Set<string>();
+  const quoted = markdown.matchAll(/"([^"]{3,80})"/g);
+  for (const match of quoted) {
+    const value = match[1];
+    if (/\b(use|asked|when|trigger|qa|ship|review|plan|test|deploy|docs?)\b/i.test(value)) {
+      triggers.add(value);
+    }
+    if (triggers.size >= 8) break;
+  }
+  return Array.from(triggers);
+}
 
+function extractHeadings(markdown: string) {
+  return markdown
+    .split('\n')
+    .filter((line) => /^#{2,3}\s+/.test(line))
+    .map((line) => line.replace(/^#+\s+/, '').trim())
+    .slice(0, 40);
+}
+
+function titleize(slug: string) {
+  return slug.split('-').map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');
+}
+
+async function ensureGstack() {
+  await mkdir('.cache', { recursive: true });
   if (!existsSync(sourceDir)) {
     execFileSync('git', ['clone', '--depth', '1', repoUrl, sourceDir], { stdio: 'inherit' });
   } else {
     execFileSync('git', ['-C', sourceDir, 'pull', '--ff-only'], { stdio: 'inherit' });
   }
+}
 
-  const skillFiles = await discoverSkillFiles(sourceDir);
-  const indexRows: string[] = [];
+function renderGeneratedIndex(records: SkillRecord[]) {
+  const rows = records
+    .map((r) => `| ${r.title} | ${r.stage} | ${r.specialist} | \`${r.sourcePath}\` |`)
+    .join('\n');
+
+  return `# Generated GStack Catalog\n\nGenerated from \`${repoUrl}\`. This is a metadata catalog, not the curated Vietnamese workflow pages. Curated Phase 1 pages live next to this file as \`*.vi.md\`.\n\n| Workflow | Stage | Specialist | Source |\n|---|---|---|---|\n${rows}\n`;
+}
+
+async function main() {
+  await ensureGstack();
+  await mkdir(path.dirname(catalogPath), { recursive: true });
+  await mkdir(path.dirname(generatedIndexPath), { recursive: true });
+
+  const skillFiles = await walkSkillFiles(sourceDir);
+  const records: SkillRecord[] = [];
 
   for (const file of skillFiles) {
     const raw = await readFile(file, 'utf8');
     const { data, body } = parseFrontmatter(raw);
-    const skillName = path.basename(path.dirname(file));
-    const slug = slugify(skillName);
-    const title = data.name || skillName;
+    const relative = path.relative(sourceDir, file);
+    const dirSlug = path.dirname(relative).replace(/\\/g, '/');
+    const slug = slugify(dirSlug === '.' ? data.name || 'root' : dirSlug.split('/').join('-'));
+    const name = data.name || path.basename(path.dirname(file));
     const description = data.description || '';
     const stage = classifyStage(slug);
-    const sourcePath = path.relative(sourceDir, file);
 
-    await writeFile(
-      path.join(outputDir, `${slug}.md`),
-      workflowMarkdown({ title, slug, sourcePath, description, stage, body })
-    );
-
-    indexRows.push(`| [${title}](./generated/${slug}.md) | ${stage} | ${sourcePath} |`);
+    records.push({
+      slug,
+      name,
+      title: titleize(name),
+      description,
+      stage,
+      specialist: inferSpecialist(slug, description),
+      sourcePath: relative,
+      sourceUrl: `https://github.com/garrytan/gstack/tree/main/${relative}`,
+      triggers: extractTriggers(body),
+      headings: extractHeadings(body),
+    });
   }
 
-  const index = `# Generated GStack Workflow Index\n\nGenerated from \`${repoUrl}\`.\n\n| Workflow | Stage | Source |\n|---|---|---|\n${indexRows.join('\n')}\n`;
-  await writeFile(path.join(outputDir, 'index.md'), index);
+  records.sort((a, b) => a.stage.localeCompare(b.stage) || a.slug.localeCompare(b.slug));
+  await writeFile(catalogPath, `${JSON.stringify({ repoUrl, generatedAt: new Date().toISOString(), count: records.length, records }, null, 2)}\n`);
+  await writeFile(generatedIndexPath, renderGeneratedIndex(records));
 
-  console.log(`Generated ${skillFiles.length} workflow pages in ${outputDir}`);
+  console.log(`Generated gstack catalog with ${records.length} skills`);
+  console.log(`Catalog: ${catalogPath}`);
+  console.log(`Index: ${generatedIndexPath}`);
 }
 
 main().catch((error) => {

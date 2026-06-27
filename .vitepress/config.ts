@@ -27,7 +27,17 @@ export default defineConfig({
       },
       {
         text: 'Lifecycle',
-        items: [{ text: 'Sprint Lifecycle', link: '/stages/lifecycle' }]
+        items: [
+          { text: 'Sprint Lifecycle', link: '/stages/lifecycle' },
+          { text: 'Lucky Agent OS Layers', link: '/layers/' },
+          { text: 'Intent Routing', link: '/layers/intent-routing.vi' },
+          { text: 'Workflow Lifecycle', link: '/layers/workflow-lifecycle.vi' },
+          { text: 'Skill / Role Specialization', link: '/layers/skill-role-specialization.vi' },
+          { text: 'Tool Protocol', link: '/layers/tool-protocol.vi' },
+          { text: 'Evidence Gate', link: '/layers/evidence-gate.vi' },
+          { text: 'Memory / Learning Loop', link: '/layers/memory-learning-loop.vi' },
+          { text: 'Project Structure / Runbooks', link: '/layers/project-structure-runbooks.vi' }
+        ]
       },
       {
         text: 'Library',

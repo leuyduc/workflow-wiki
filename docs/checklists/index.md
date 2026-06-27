@@ -1,6 +1,10 @@
 # Checklists
 
-## MVP Checklist
+Checklists prove that a workflow is complete.
+
+## Core Checklists
+
+- [Evidence Gate](./evidence-gate.vi.md)
 
 - [ ] Workspace created
 - [ ] GitHub repo created
