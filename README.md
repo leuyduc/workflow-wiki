@@ -22,18 +22,19 @@ The site is meant to help Lucky and collaborators understand how to run project 
 
 Start here if you are new to the project:
 
-1. `README.vi.md` - Vietnamese project overview.
-2. `docs/gstack-overview.vi.md` - Vietnamese overview of what `gstack` is and why it is the first source.
-3. `docs/hermes-evolution/from-fable-5-prompt.vi.md` - lessons for evolving Hermes from the Fable 5 prompt case study.
-4. `docs/agent-os/oh-my-openagent-lessons.vi.md` - agent OS, orchestration, and evidence-gate lessons from `oh-my-openagent`.
-5. `docs/project-structure/ai-agent-project-structure.vi.md` - AI-agent-friendly repo structure template for Lucky/Hermes/Codex.
-6. `PLAN.md` - roadmap, MVP scope, and next phases.
-7. `ARCHITECTURE.md` - ingestion, normalization, and publishing architecture.
-8. `docs/stages/lifecycle.md` - workflow lifecycle: Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect.
-9. `docs/workflows/index.md` - initial high-priority workflow list.
-10. `docs/prompts/index.md` - starter prompts for ingestion, QA, and workflow page conversion.
-11. `docs/checklists/index.md` - MVP, workflow page, and browser QA checklists.
-12. `scripts/sync-gstack.ts` - for AI/dev readers who need to understand the planned gstack sync pipeline.
+1. `AGENTS.md` - entrypoint for Codex, Antigravity, Hermes, or another agent before it starts work.
+2. `README.vi.md` - Vietnamese project overview.
+3. `docs/gstack-overview.vi.md` - Vietnamese overview of what `gstack` is and why it is the first source.
+4. `docs/hermes-evolution/from-fable-5-prompt.vi.md` - lessons for evolving Hermes from the Fable 5 prompt case study.
+5. `docs/agent-os/oh-my-openagent-lessons.vi.md` - agent OS, orchestration, and evidence-gate lessons from `oh-my-openagent`.
+6. `docs/project-structure/ai-agent-project-structure.vi.md` - AI-agent-friendly repo structure template for Lucky/Hermes/Codex.
+7. `PLAN.md` - roadmap, MVP scope, and next phases.
+8. `ARCHITECTURE.md` - ingestion, normalization, and publishing architecture.
+9. `docs/stages/lifecycle.md` - workflow lifecycle: Think -> Plan -> Build -> Review -> Test -> Ship -> Reflect.
+10. `docs/workflows/index.md` - initial high-priority workflow list.
+11. `docs/prompts/index.md` - starter prompts for ingestion, QA, and workflow page conversion.
+12. `docs/checklists/index.md` - MVP, workflow page, and browser QA checklists.
+13. `scripts/sync-gstack.ts` - for AI/dev readers who need to understand the planned gstack sync pipeline.
 
 Human readers should start with `README.vi.md` and `docs/gstack-overview.vi.md`. AI/dev readers should also read `PLAN.md`, `ARCHITECTURE.md`, and `scripts/sync-gstack.ts`.
 
