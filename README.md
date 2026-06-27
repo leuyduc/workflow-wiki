@@ -47,6 +47,7 @@ Human readers should start with `README.vi.md` and `docs/gstack-overview.vi.md`.
 - Build a static docs/wiki MVP first.
 - Use `gstack` as the first source of workflow knowledge.
 - Normalize each skill into a workflow page with inputs, process, outputs, checklists, and related workflows.
+- Phase 1 has started with 10 priority `gstack` workflows under `docs/workflows/generated/`.
 - Expand later into AI search, role-based guides, industry playbooks, and workflow graphs.
 
 ## Recommended Stack

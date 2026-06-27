@@ -45,6 +45,7 @@ Tóm lại: người đọc nên bắt đầu từ `README.vi.md` và `docs/gsta
 - Làm MVP dạng static docs/wiki trước.
 - Dùng `gstack` làm nguồn kiến thức workflow đầu tiên.
 - Chuẩn hóa mỗi skill thành một trang workflow gồm input, quy trình, output, checklist và workflow liên quan.
+- Phase 1 đã bắt đầu với 10 workflow `gstack` ưu tiên trong `docs/workflows/generated/`.
 - Sau đó mở rộng thêm AI search, hướng dẫn theo vai trò, playbook theo ngành và workflow graph.
 
 ## Stack Đề Xuất
