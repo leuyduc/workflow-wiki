@@ -5,6 +5,7 @@ Checklists prove that a workflow is complete.
 ## Core Checklists
 
 - [Evidence Gate](./evidence-gate.vi.md)
+- [System Design Review](./system-design-review.vi.md)
 
 - [ ] Workspace created
 - [ ] GitHub repo created

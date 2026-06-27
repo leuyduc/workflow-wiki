@@ -71,6 +71,7 @@ For simple one-off questions, answer directly and do not over-plan.
 | Website clone/rebuild | `ai-website-cloner-template`, browser reconnaissance, legal/safety check |
 | Browser QA / Antigravity-style testing | `agent-browser`, screenshot + console + responsive checks |
 | DevOps/SRE/deploy/server issue | `devops-sre-runbook-router`, `web-hosting-selfhosted`, evidence gate |
+| Architecture/system design | `system-design-review`, capacity estimates, tradeoff review |
 | Security/reverse/CTF | `reverse-skill-router`, authorization/scope check first |
 | Research/URL/GitHub repo reading | `agent-reach` or web/GitHub tools, source hygiene |
 | Code review | findings first, file references, risk/test gaps |

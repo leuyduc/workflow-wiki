@@ -180,6 +180,7 @@ Decision:
 | Fable 5 prompt case study | Inspiration Only | chỉ extract style/tool/memory principle, không copy prompt |
 | DevOps/SRE skill research | Supporting/Core for ops layer | cần cho production runbook và evidence |
 | Browser QA practice | Core for Evidence Gate | Lucky yêu cầu visual/browser-in-loop nhiều lần |
+| `liquidslr/system-design-notes` | Supporting Source | bổ sung architecture/system design framework, estimation và building blocks cho Plan/Engineering Review |
 
 ## Anti-patterns
 

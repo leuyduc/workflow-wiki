@@ -12,6 +12,8 @@ Dùng khi một agent đơn lẻ dễ bỏ sót góc nhìn sản phẩm/kỹ thu
 
 autoplan, plan-eng-review, design-review, review
 
+Supporting source: [System Design Notes](../sources/system-design-notes.vi.md) bổ sung role Architect / System Design Reviewer.
+
 ## Cách Áp Dụng Cho Agent
 
 1. Nhận diện task có chạm layer này không.

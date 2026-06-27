@@ -12,6 +12,8 @@ Dùng cho mọi task có file/code/web/server/tool side effect.
 
 AGENTS, hermes-evolution, devops-sre-runbook-router
 
+Supporting source: [System Design Notes](../sources/system-design-notes.vi.md) bổ sung protocol estimate assumptions trước khi chọn architecture.
+
 ## Cách Áp Dụng Cho Agent
 
 1. Nhận diện task có chạm layer này không.
