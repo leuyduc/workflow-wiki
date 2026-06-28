@@ -19,6 +19,7 @@ export default defineConfig({
           { text: 'Core Thesis', link: '/core-thesis.vi' },
           { text: 'Source Evaluation', link: '/source-evaluation.vi' },
           { text: 'System Design Notes', link: '/sources/system-design-notes.vi' },
+          { text: 'Prompt Master', link: '/sources/prompt-master.vi' },
           { text: 'GStack Overview', link: '/gstack-overview.vi' },
           { text: 'Hermes Evolution', link: '/hermes-evolution/from-fable-5-prompt.vi' },
           { text: 'Oh My OpenAgent Lessons', link: '/agent-os/oh-my-openagent-lessons.vi' },
@@ -58,6 +59,7 @@ export default defineConfig({
           { text: 'Prompts', link: '/prompts/' },
           { text: 'Checklists', link: '/checklists/' },
           { text: 'System Design Review Checklist', link: '/checklists/system-design-review.vi' },
+          { text: 'Prompt Quality Checklist', link: '/checklists/prompt-quality.vi' },
           { text: 'Templates', link: '/templates/' }
         ]
       }

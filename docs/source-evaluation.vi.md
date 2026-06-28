@@ -181,6 +181,7 @@ Decision:
 | DevOps/SRE skill research | Supporting/Core for ops layer | cần cho production runbook và evidence |
 | Browser QA practice | Core for Evidence Gate | Lucky yêu cầu visual/browser-in-loop nhiều lần |
 | `liquidslr/system-design-notes` | Supporting Source | bổ sung architecture/system design framework, estimation và building blocks cho Plan/Engineering Review |
+| `nidhinjs/prompt-master` | Supporting Source | bổ sung target-tool routing, prompt quality checklist và anti-patterns cho first-turn quality |
 
 ## Anti-patterns
 

@@ -74,6 +74,7 @@ For simple one-off questions, answer directly and do not over-plan.
 | Architecture/system design | `system-design-review`, capacity estimates, tradeoff review |
 | Security/reverse/CTF | `reverse-skill-router`, authorization/scope check first |
 | Research/URL/GitHub repo reading | `agent-reach` or web/GitHub tools, source hygiene |
+| Prompt writing/optimization | `prompt-engineering`, target-tool-first, prompt-quality checklist |
 | Code review | findings first, file references, risk/test gaps |
 | Multi-file implementation | plan, inspect codebase, implement, test, self-review |
 | Workflow/wiki/docs | update docs with Vietnamese-first human explanations |

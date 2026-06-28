@@ -14,6 +14,8 @@ AGENTS, hermes-evolution, devops-sre-runbook-router
 
 Supporting source: [System Design Notes](../sources/system-design-notes.vi.md) bổ sung protocol estimate assumptions trước khi chọn architecture.
 
+Supporting source: [Prompt Master](../sources/prompt-master.vi.md) bổ sung target-tool-first prompting và prompt quality checklist.
+
 ## Cách Áp Dụng Cho Agent
 
 1. Nhận diện task có chạm layer này không.
