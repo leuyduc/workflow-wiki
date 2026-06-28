@@ -78,6 +78,7 @@ For simple one-off questions, answer directly and do not over-plan.
 | Prompt writing/optimization | `prompt-engineering`, target-tool-first, prompt-quality checklist |
 | Code review | findings first, file references, risk/test gaps |
 | Multi-file implementation | plan, inspect codebase, implement, test, self-review |
+| Model split plan/code/review | GPT-5.5/strong planner contract, Gemini/fast coder slice, mandatory review gate |
 | Repo-local agent workflow / handoff | repo-harness source, repo-local harness checklist, file-backed state |
 | Workflow/wiki/docs | update docs with Vietnamese-first human explanations |
 | Evidence-sensitive task | `agent-evidence-gate` |

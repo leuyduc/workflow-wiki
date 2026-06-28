@@ -5,6 +5,7 @@ Starter prompts for working with this project and for converting gstack workflow
 ## Agent Entrypoint
 
 - [Dùng Lucky Workflow Với Agent Khác](./use-lucky-workflow.vi.md)
+- [Model Split Workflow Prompt](./model-split-workflow.vi.md)
 
 ## Browser-In-The-Loop QA Prompt
 

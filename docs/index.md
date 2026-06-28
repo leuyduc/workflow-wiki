@@ -38,6 +38,7 @@ https://github.com/garrytan/gstack
 - [Cấu trúc project cho AI agent](./project-structure/ai-agent-project-structure.vi.md)
 - [Sprint Lifecycle](./stages/lifecycle.md)
 - [Workflow Index](./workflows/index.md)
+- [Model Split Workflow](./workflows/model-split-plan-code-review.vi.md)
 - [Specialists](./specialists/index.md)
 - [Prompt Library](./prompts/index.md)
 - [Checklists](./checklists/index.md)

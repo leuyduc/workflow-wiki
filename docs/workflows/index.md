@@ -8,6 +8,12 @@ This page lists generated workflow pages adapted from `gstack` into the Lucky Ag
 - Curated Phase 1 workflows: 10
 - Metadata Phase 4 workflow pages: 49
 
+## Curated Lucky Workflows
+
+| Workflow | Stage | Specialist | Status |
+|---|---|---|---|
+| [Model Split Plan/Code/Review](./model-split-plan-code-review.vi.md) | Plan -> Build -> Review | Architect + Fast Coder + Reviewer | Curated |
+
 ## GStack Workflow Pages
 
 | Workflow | Stage | Specialist | Status |

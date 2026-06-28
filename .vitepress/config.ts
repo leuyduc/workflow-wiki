@@ -46,6 +46,7 @@ export default defineConfig({
         text: 'Library',
         items: [
           { text: 'Workflows', link: '/workflows/' },
+          { text: 'Model Split Plan/Code/Review', link: '/workflows/model-split-plan-code-review.vi' },
           { text: 'Office Hours', link: '/workflows/generated/office-hours.vi' },
           { text: 'Autoplan', link: '/workflows/generated/autoplan.vi' },
           { text: 'Plan CEO Review', link: '/workflows/generated/plan-ceo-review.vi' },
@@ -62,6 +63,8 @@ export default defineConfig({
           { text: 'System Design Review Checklist', link: '/checklists/system-design-review.vi' },
           { text: 'Prompt Quality Checklist', link: '/checklists/prompt-quality.vi' },
           { text: 'Repo-local Agent Harness Checklist', link: '/checklists/repo-local-agent-harness.vi' },
+          { text: 'Model Split Review Gate', link: '/checklists/model-split-review-gate.vi' },
+          { text: 'Model Split Prompt', link: '/prompts/model-split-workflow.vi' },
           { text: 'Templates', link: '/templates/' }
         ]
       }

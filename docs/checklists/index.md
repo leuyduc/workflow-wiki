@@ -8,6 +8,7 @@ Checklists prove that a workflow is complete.
 - [System Design Review](./system-design-review.vi.md)
 - [Prompt Quality](./prompt-quality.vi.md)
 - [Repo-local Agent Harness](./repo-local-agent-harness.vi.md)
+- [Model Split Review Gate](./model-split-review-gate.vi.md)
 
 - [ ] Workspace created
 - [ ] GitHub repo created
