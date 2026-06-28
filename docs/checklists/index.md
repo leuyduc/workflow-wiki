@@ -7,6 +7,7 @@ Checklists prove that a workflow is complete.
 - [Evidence Gate](./evidence-gate.vi.md)
 - [System Design Review](./system-design-review.vi.md)
 - [Prompt Quality](./prompt-quality.vi.md)
+- [Repo-local Agent Harness](./repo-local-agent-harness.vi.md)
 
 - [ ] Workspace created
 - [ ] GitHub repo created

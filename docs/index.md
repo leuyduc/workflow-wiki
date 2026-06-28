@@ -31,6 +31,7 @@ https://github.com/garrytan/gstack
 - [Lucky Agent OS Layers](./layers/index.md)
 - [System Design Notes source](./sources/system-design-notes.vi.md)
 - [Prompt Master source](./sources/prompt-master.vi.md)
+- [repo-harness source](./sources/repo-harness.vi.md)
 - [Tổng quan GStack](./gstack-overview.vi.md)
 - [Bài học cho Hermes từ prompt Fable 5](./hermes-evolution/from-fable-5-prompt.vi.md)
 - [Bài học từ oh-my-openagent](./agent-os/oh-my-openagent-lessons.vi.md)

@@ -37,10 +37,11 @@ When joining this repo, read in this order:
 6. `docs/hermes-evolution/from-fable-5-prompt.vi.md` - Hermes evolution lessons.
 7. `docs/agent-os/oh-my-openagent-lessons.vi.md` - agent OS and evidence-gate lessons.
 8. `docs/project-structure/ai-agent-project-structure.vi.md` - repo structure for AI-agent-friendly projects.
-9. `PLAN.md` - roadmap and MVP scope.
-10. `ARCHITECTURE.md` - ingestion/publishing architecture.
-11. `docs/stages/lifecycle.md` - workflow lifecycle.
-12. `docs/workflows/index.md`, `docs/checklists/index.md`, `docs/prompts/index.md` as needed.
+9. `docs/sources/repo-harness.vi.md` - repo-local harness, handoff, task contract, and evidence lessons.
+10. `PLAN.md` - roadmap and MVP scope.
+11. `ARCHITECTURE.md` - ingestion/publishing architecture.
+12. `docs/stages/lifecycle.md` - workflow lifecycle.
+13. `docs/workflows/index.md`, `docs/checklists/index.md`, `docs/prompts/index.md` as needed.
 
 Do not assume you understand the repo after only reading `README.md`.
 
@@ -77,6 +78,7 @@ For simple one-off questions, answer directly and do not over-plan.
 | Prompt writing/optimization | `prompt-engineering`, target-tool-first, prompt-quality checklist |
 | Code review | findings first, file references, risk/test gaps |
 | Multi-file implementation | plan, inspect codebase, implement, test, self-review |
+| Repo-local agent workflow / handoff | repo-harness source, repo-local harness checklist, file-backed state |
 | Workflow/wiki/docs | update docs with Vietnamese-first human explanations |
 | Evidence-sensitive task | `agent-evidence-gate` |
 

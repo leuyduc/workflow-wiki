@@ -10,7 +10,9 @@ Dùng khi có lesson tái sử dụng, quyết định kiến trúc, bug pattern
 
 ## Nguồn / Workflow Đóng Góp
 
-document-release, learn, context-save, context-restore
+document-release, learn, context-save, context-restore, repo-harness
+
+`repo-harness` nhấn mạnh memory nên nằm trong repo artifacts khi liên quan đến task: current status, active plan, handoff/resume, checks và review. Chat memory chỉ hỗ trợ, không phải source of truth cho workflow dài.
 
 ## Cách Áp Dụng Cho Agent
 

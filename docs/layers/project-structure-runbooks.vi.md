@@ -10,7 +10,9 @@ Dùng khi tạo repo mới, chuẩn hóa project, deploy/runbook hoặc handoff 
 
 ## Nguồn / Workflow Đóng Góp
 
-ai-agent-project-structure, ship, document-release, devops docs
+ai-agent-project-structure, repo-harness, ship, document-release, devops docs
+
+`repo-harness` bổ sung pattern repo-local harness: `AGENTS.md`, `plans/`, `tasks/`, `.ai/harness`, handoff, checks và review cards. Không cần copy nguyên tool vào mọi repo, nhưng nên học cách làm repo tự mô tả trạng thái workflow.
 
 ## Cách Áp Dụng Cho Agent
 

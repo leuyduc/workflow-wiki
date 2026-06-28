@@ -182,6 +182,7 @@ Decision:
 | Browser QA practice | Core for Evidence Gate | Lucky yêu cầu visual/browser-in-loop nhiều lần |
 | `liquidslr/system-design-notes` | Supporting Source | bổ sung architecture/system design framework, estimation và building blocks cho Plan/Engineering Review |
 | `nidhinjs/prompt-master` | Supporting Source | bổ sung target-tool routing, prompt quality checklist và anti-patterns cho first-turn quality |
+| `Ancienttwo/repo-harness` | Supporting/Core-adjacent Source | bổ sung repo-local agent harness, file-backed handoff, task contract, hook lifecycle và evidence/review surface |
 
 ## Anti-patterns
 
